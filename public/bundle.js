@@ -14193,9 +14193,64 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var About = function About(props) {
   return _react2.default.createElement(
-    'h4',
+    "div",
     null,
-    'About component'
+    _react2.default.createElement(
+      "h1",
+      { className: "text-center" },
+      "About!"
+    ),
+    _react2.default.createElement(
+      "p",
+      { className: "text-justify" },
+      "This a simple weather app created to learn about React. Interesting links:"
+    ),
+    _react2.default.createElement(
+      "dl",
+      null,
+      _react2.default.createElement(
+        "dt",
+        null,
+        _react2.default.createElement(
+          "a",
+          { href: "https://facebook.github.io/react/" },
+          "React"
+        )
+      ),
+      _react2.default.createElement(
+        "dd",
+        { className: "text-justify" },
+        "This is the framework used to create the user interface of this website"
+      ),
+      _react2.default.createElement(
+        "dt",
+        null,
+        _react2.default.createElement(
+          "a",
+          { href: "https://openweathermap.org/" },
+          "OpenWeatherMap"
+        )
+      ),
+      _react2.default.createElement(
+        "dd",
+        { className: "text-justify" },
+        "Api used to search weather given a city name"
+      ),
+      _react2.default.createElement(
+        "dt",
+        null,
+        _react2.default.createElement(
+          "a",
+          { href: "http://foundation.zurb.com/" },
+          "Foundation"
+        )
+      ),
+      _react2.default.createElement(
+        "dd",
+        { className: "text-justify" },
+        "Giving style to the app"
+      )
+    )
   );
 };
 
@@ -14216,13 +14271,64 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouter = __webpack_require__(111);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Examples = function Examples(props) {
   return _react2.default.createElement(
-    'h4',
+    'div',
     null,
-    'Examples component!'
+    _react2.default.createElement(
+      'h1',
+      { className: 'text-center' },
+      'Examples!'
+    ),
+    _react2.default.createElement(
+      'p',
+      { className: 'text-justify' },
+      'Here are some example locations, click on them to search for the temperature of this places:'
+    ),
+    _react2.default.createElement(
+      'ul',
+      null,
+      _react2.default.createElement(
+        'li',
+        null,
+        _react2.default.createElement(
+          _reactRouter.Link,
+          { to: '/?place=Venezuela' },
+          'Venezuela'
+        )
+      ),
+      _react2.default.createElement(
+        'li',
+        null,
+        _react2.default.createElement(
+          _reactRouter.Link,
+          { to: '/?place=Canada' },
+          'Canada'
+        )
+      ),
+      _react2.default.createElement(
+        'li',
+        null,
+        _react2.default.createElement(
+          _reactRouter.Link,
+          { to: '/?place=Ecuador' },
+          'Ecuador'
+        )
+      ),
+      _react2.default.createElement(
+        'li',
+        null,
+        _react2.default.createElement(
+          _reactRouter.Link,
+          { to: '/?place=Madagascar' },
+          'Madagascar'
+        )
+      )
+    )
   );
 };
 
@@ -14254,7 +14360,15 @@ var Main = function Main(props) {
     'div',
     null,
     _react2.default.createElement(_Nav2.default, null),
-    props.children
+    _react2.default.createElement(
+      'div',
+      { className: 'row' },
+      _react2.default.createElement(
+        'div',
+        { className: 'columns medium-6 large-4 small-11 small-centered' },
+        props.children
+      )
+    )
   );
 };
 
@@ -14430,7 +14544,7 @@ var Weather = _react2.default.createClass({
       if (isLoading) {
         return _react2.default.createElement(
           'h5',
-          null,
+          { className: 'text-center' },
           'Fetching weather...'
         );
       } else if (temp && place) {
@@ -14443,7 +14557,7 @@ var Weather = _react2.default.createClass({
       null,
       _react2.default.createElement(
         'h1',
-        null,
+        { className: 'text-center' },
         'Get Weather'
       ),
       _react2.default.createElement(_WeatherForm2.default, { onUpdates: this.handleUpdates }),
@@ -14491,7 +14605,7 @@ var WeatherForm = _react2.default.createClass({
         _react2.default.createElement('input', { type: 'text', ref: 'place', placeholder: 'Enter city name' }),
         _react2.default.createElement(
           'button',
-          null,
+          { className: 'button expanded' },
           'Get Weather'
         )
       )
@@ -14524,20 +14638,20 @@ var WeatherMessage = function WeatherMessage(_ref) {
 
   if (place != undefined) {
     return _react2.default.createElement(
-      'div',
+      "div",
       null,
       _react2.default.createElement(
-        'h2',
-        null,
-        'It\'s ',
+        "h2",
+        { className: "text-center" },
+        "It's ",
         temp,
-        ', in ',
+        "\xB0, in ",
         place,
-        '.'
+        "."
       )
     );
   } else {
-    return _react2.default.createElement('h1', null);
+    return _react2.default.createElement("h1", null);
   }
 };
 
