@@ -10,7 +10,7 @@ import Examples from 'Examples'
 import 'style-loader!css-loader!foundation-sites/dist/css/foundation.min.css'
 $(document).foundation();
 // load custom style
-import 'style-loader!css-loader!appStyles'
+import 'style-loader!css-loader!sass-loader!appStyles'
 
 ReactDom.render(
   <Router history={hashHistory}>
