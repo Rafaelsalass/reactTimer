@@ -2,6 +2,7 @@ import React from 'react'
 import WeatherMessage from 'WeatherMessage'
 import WeatherForm from 'WeatherForm'
 import openWeatherMap from 'openWeatherMap'
+import ErrorMessage from 'ErrorMessage'
 
 var Weather = React.createClass({
   getDefaultProps() {
@@ -16,7 +17,11 @@ var Weather = React.createClass({
   },
 
   handleUpdates(place) {
-    this.setState({isLoading: true});
+    this.setState({
+      isLoading: true,
+      errorMessage: undefined
+    });
+    
     var that = this;
     openWeatherMap.getTem(place).then(temp => {
       that.setState({
@@ -24,17 +29,17 @@ var Weather = React.createClass({
         temp: temp,
         isLoading: false
       });
-    }, errorMessage => {
+    }, e => {
       that.setState({
         isLoading: false,
-        place: undefined
+        place: undefined,
+        errorMessage: e
       });
-      alert(errorMessage);
     });
   },
 
   render() {
-    var {isLoading, place, temp} = this.state;
+    var {isLoading, place, temp, errorMessage} = this.state;
     function renderWeatherMessage () {
       if (isLoading){
         return <h5 className="text-center">Fetching weather...</h5>;
@@ -43,11 +48,20 @@ var Weather = React.createClass({
       }
     }
 
+    function renderError(){
+      if (errorMessage != undefined) {
+        return (
+          <ErrorMessage errorMessage={errorMessage}/>
+        );
+      }
+    }
+
     return (
       <div>
-        <h1 className="text-center">Get Weather</h1>
+        <h1 className="text-center page-title">Get Weather</h1>
         <WeatherForm onUpdates={this.handleUpdates}/>
         {renderWeatherMessage()}
+        {renderError()}
       </div>
     );
   }

@@ -8,7 +8,7 @@ var WeatherMessage = ({temp, place}) => {
       </div>
     );
   } else {
-    return <h1></h1>
+    return false;
   }
 }
 

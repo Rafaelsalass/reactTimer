@@ -9,6 +9,8 @@ import Examples from 'Examples'
 // load foundation
 import 'style-loader!css-loader!foundation-sites/dist/css/foundation.min.css'
 $(document).foundation();
+// load custom style
+import 'style-loader!css-loader!appStyles'
 
 ReactDom.render(
   <Router history={hashHistory}>

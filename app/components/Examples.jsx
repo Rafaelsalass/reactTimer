@@ -4,7 +4,7 @@ import {Link} from 'react-router'
 var Examples = props => {
   return (
     <div>
-      <h1 className="text-center">Examples!</h1>
+      <h1 className="text-center page-title">Examples!</h1>
       <p className="text-justify">Here are some example locations, click on them to search for the
       temperature of this places:</p>
      <ul>
