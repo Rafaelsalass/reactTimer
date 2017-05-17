@@ -14836,8 +14836,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Nav = _react2.default.createClass({
   displayName: 'Nav',
   onFormSubmit: function onFormSubmit(e) {
+    var place = this.refs.place.value;
     e.preventDefault();
-    console.log('form submitted');
+    var encodedPlace = encodeURIComponent(place);
+    if (place.length > 0) {
+      this.refs.place.value = '';
+      window.location.hash = '#/?place=' + encodedPlace;
+    }
   },
   render: function render() {
     return _react2.default.createElement(
@@ -14898,7 +14903,7 @@ var Nav = _react2.default.createClass({
             _react2.default.createElement(
               'li',
               null,
-              _react2.default.createElement('input', { type: 'search', placeholder: 'Enter city name' })
+              _react2.default.createElement('input', { type: 'search', ref: 'place', placeholder: 'Enter city name' })
             ),
             _react2.default.createElement(
               'li',
@@ -14964,7 +14969,9 @@ var Weather = _react2.default.createClass({
   handleUpdates: function handleUpdates(place) {
     this.setState({
       isLoading: true,
-      errorMessage: undefined
+      errorMessage: undefined,
+      place: undefined,
+      temp: undefined
     });
 
     var that = this;
@@ -14977,10 +14984,23 @@ var Weather = _react2.default.createClass({
     }, function (e) {
       that.setState({
         isLoading: false,
-        place: undefined,
         errorMessage: e
       });
     });
+  },
+  componentDidMount: function componentDidMount() {
+    var place = this.props.location.query.place;
+    if (place && place.length > 0) {
+      this.handleUpdates(place);
+      window.location.hash = '#/';
+    }
+  },
+  componentWillReceiveProps: function componentWillReceiveProps(newProps) {
+    var place = newProps.location.query.place;
+    if (place && place.length > 0) {
+      this.handleUpdates(place);
+      window.location.hash = '#/';
+    }
   },
   render: function render() {
     var _state = this.state,

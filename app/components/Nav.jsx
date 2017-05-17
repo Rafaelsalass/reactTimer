@@ -3,8 +3,13 @@ import { Link, IndexLink } from 'react-router'
 
 var Nav = React.createClass({
   onFormSubmit(e){
+    var place = this.refs.place.value;
     e.preventDefault(); 
-    console.log('form submitted');
+    var encodedPlace = encodeURIComponent(place);
+    if (place.length > 0) {
+      this.refs.place.value = '';
+      window.location.hash = `#/?place=${encodedPlace}`;
+    }
   },
   render(){
     return (
@@ -29,7 +34,7 @@ var Nav = React.createClass({
         <div className="top-bar-right">
           <form onSubmit={this.onFormSubmit}>
             <ul className="menu">
-              <li><input type="search" placeholder="Enter city name"></input></li>
+              <li><input type="search" ref="place" placeholder="Enter city name"></input></li>
               <li><button className="button">Get Weather</button></li>
             </ul>
           </form>
