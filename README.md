@@ -1,7 +1,7 @@
 # this is a really simple react app
 Nothing special, just learning.
 
-### If you want to run this on yor computer, do this:
+### If you want to run this on your computer, do this:
 
 ```
 git clone https://github.com/Rafaelsalass/reactWeather
