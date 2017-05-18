@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, IndexLink } from 'react-router'
 
-var Nav = React.createClass({
+class Nav extends React.Component {
   render (){
     return (
       <div className="top-bar">
@@ -9,8 +9,8 @@ var Nav = React.createClass({
           <ul className="menu">
             <li className="menu-text">React time app</li>
             <li>
-              <Link to="/" activeClassName="active" 
-                activeStyle={{fontWeight: 'bold'}}>Timer</Link>
+              <IndexLink to="/" activeClassName="active" 
+                activeStyle={{fontWeight: 'bold'}}>Timer</IndexLink>
             </li>
             <li>
               <Link to="/CountDown" activeClassName="active" 
@@ -26,6 +26,6 @@ var Nav = React.createClass({
       </div>
     );
   }
-});
+};
 
 export default Nav;

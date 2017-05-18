@@ -1,11 +1,11 @@
 import React from 'react'
 
-var Timer = React.createClass({
+class Timer extends React.Component{
   render (){
     return (
       <h1>Timer</h1>
     );
   }
-});
+};
 
 export default Timer;

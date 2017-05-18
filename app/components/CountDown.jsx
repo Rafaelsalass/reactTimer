@@ -1,11 +1,11 @@
 import React from 'react'
 
-var CountDown = React.createClass({
+class CountDown extends React.Component{
   render (){
     return (
       <h1>CountDown</h1>
     );
   }
-});
+};
 
 export default CountDown;
