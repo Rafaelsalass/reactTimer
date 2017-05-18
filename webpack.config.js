@@ -23,14 +23,6 @@ module.exports ={
     extensions: ['.js', '.jsx'],
     alias: {
       Main: path.resolve(__dirname, 'app/components/Main.jsx'),
-      Nav: path.resolve(__dirname, 'app/components/Nav.jsx'),
-      ErrorMessage: path.resolve(__dirname, 'app/components/ErrorMessage.jsx'),
-      About: path.resolve(__dirname, 'app/components/About.jsx'),
-      Examples: path.resolve(__dirname, 'app/components/Examples.jsx'),
-      openWeatherMap: path.resolve(__dirname, 'app/api/openWeatherMap.jsx'),
-      WeatherMessage: path.resolve(__dirname, 'app/components/WeatherMessage.jsx'),
-      WeatherForm: path.resolve(__dirname, 'app/components/WeatherForm.jsx'),
-      Weather: path.resolve(__dirname, 'app/components/Weather.jsx'),
       appStyles: path.resolve(__dirname, 'app/styles/app.scss')
     }
   },
