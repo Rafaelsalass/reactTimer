@@ -1,9 +1,10 @@
 import React from 'react'
+import Nav from 'Nav'
 
 var Main = props => {
   return (
     <div>
-      <p>Main.jsx render</p>
+      <Nav/>
       {props.children}
     </div>
   );
