@@ -13317,8 +13317,7 @@ var Nav = function (_React$Component) {
               null,
               _react2.default.createElement(
                 _reactRouter.IndexLink,
-                { to: '/', activeClassName: 'active',
-                  activeStyle: { fontWeight: 'bold' } },
+                { to: '/', activeClassName: 'active-link' },
                 'Timer'
               )
             ),
@@ -13327,8 +13326,7 @@ var Nav = function (_React$Component) {
               null,
               _react2.default.createElement(
                 _reactRouter.Link,
-                { to: '/CountDown', activeClassName: 'active',
-                  activeStyle: { fontWeight: 'bold' } },
+                { to: '/CountDown', activeClassName: 'active-link' },
                 'CountDown'
               )
             )
@@ -13342,11 +13340,11 @@ var Nav = function (_React$Component) {
             { className: 'menu' },
             _react2.default.createElement(
               'li',
-              null,
+              { className: 'menu-text' },
               'created by ',
               _react2.default.createElement(
                 'a',
-                { href: 'https://github.com/' },
+                { href: 'https://github.com/', target: '_blank' },
                 'Rafael Salas'
               )
             )
@@ -13438,7 +13436,7 @@ exports = module.exports = __webpack_require__(69)(undefined);
 
 
 // module
-exports.push([module.i, "p {\n  margin: 10rem; }\n", ""]);
+exports.push([module.i, ".active-link {\n  font-weight: bold; }\n", ""]);
 
 // exports
 

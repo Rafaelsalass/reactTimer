@@ -9,18 +9,16 @@ class Nav extends React.Component {
           <ul className="menu">
             <li className="menu-text">React time app</li>
             <li>
-              <IndexLink to="/" activeClassName="active" 
-                activeStyle={{fontWeight: 'bold'}}>Timer</IndexLink>
+              <IndexLink to="/" activeClassName="active-link">Timer</IndexLink>
             </li>
             <li>
-              <Link to="/CountDown" activeClassName="active" 
-                activeStyle={{fontWeight: 'bold'}}>CountDown</Link>
+              <Link to="/CountDown" activeClassName="active-link">CountDown</Link>
             </li>
           </ul>
         </div>
         <div className="top-bar-right">
           <ul className="menu">
-            <li>created by <a href="https://github.com/">Rafael Salas</a></li>
+            <li className="menu-text">created by <a href="https://github.com/" target="_blank">Rafael Salas</a></li>
           </ul>
         </div>
       </div>
