@@ -5,7 +5,7 @@ Nothing special, just learning.
 
 ```
 git clone https://github.com/Rafaelsalass/reactTimer
-cd reactWeather/
+cd reactTimer/
 npm install
 node server.js
 ```
