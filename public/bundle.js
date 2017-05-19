@@ -13436,7 +13436,7 @@ exports = module.exports = __webpack_require__(69)(undefined);
 
 
 // module
-exports.push([module.i, ".active-link {\n  font-weight: bold; }\n", ""]);
+exports.push([module.i, ".top-bar ul, .top-bar {\n  background: #333333; }\n\n.top-bar .menu-text {\n  color: white; }\n\n.top-bar .menu > .menu-text > a {\n  display: inline;\n  padding: 0; }\n", ""]);
 
 // exports
 
