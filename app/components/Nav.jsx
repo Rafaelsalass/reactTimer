@@ -7,7 +7,7 @@ class Nav extends React.Component {
       <div className="top-bar">
         <div className="top-bar-left">
           <ul className="menu">
-            <li className="menu-text">React time app</li>
+            <li className="menu-text">React time app!</li>
             <li>
               <IndexLink to="/" activeClassName="active-link">Timer</IndexLink>
             </li>

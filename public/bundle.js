@@ -13310,7 +13310,7 @@ var Nav = function (_React$Component) {
             _react2.default.createElement(
               'li',
               { className: 'menu-text' },
-              'React time app'
+              'React time app!'
             ),
             _react2.default.createElement(
               'li',
