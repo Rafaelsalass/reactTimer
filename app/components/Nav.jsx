@@ -12,7 +12,7 @@ class Nav extends React.Component {
               <IndexLink to="/" activeClassName="active-link">Timer</IndexLink>
             </li>
             <li>
-              <Link to="/CountDown" activeClassName="active-link">CountDown</Link>
+              <Link to="/CountDown" activeClassName="active-link">Count Down</Link>
             </li>
           </ul>
         </div>

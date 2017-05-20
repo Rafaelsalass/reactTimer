@@ -13327,7 +13327,7 @@ var Nav = function (_React$Component) {
               _react2.default.createElement(
                 _reactRouter.Link,
                 { to: '/CountDown', activeClassName: 'active-link' },
-                'CountDown'
+                'Count Down'
               )
             )
           )
