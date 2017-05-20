@@ -3,7 +3,7 @@ import React from 'react'
 class CountDown extends React.Component{
   render (){
     return (
-      <h1>CountDown</h1>
+      <h1 className="text-center">CountDown</h1>
     );
   }
 };

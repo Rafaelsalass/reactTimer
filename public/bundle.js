@@ -13210,12 +13210,12 @@ var CountDown = function (_React$Component) {
   }
 
   _createClass(CountDown, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'h1',
-        null,
-        'CountDown'
+        "h1",
+        { className: "text-center" },
+        "CountDown"
       );
     }
   }]);
@@ -13252,6 +13252,7 @@ var Main = function Main(props) {
   return _react2.default.createElement(
     'div',
     null,
+    _react2.default.createElement(_Nav2.default, null),
     _react2.default.createElement(_Nav2.default, null),
     props.children
   );
@@ -13396,12 +13397,12 @@ var Timer = function (_React$Component) {
   }
 
   _createClass(Timer, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'h1',
-        null,
-        'Timer'
+        "h1",
+        { className: "text-center" },
+        "Timer"
       );
     }
   }]);
