@@ -13253,7 +13253,6 @@ var Main = function Main(props) {
     'div',
     null,
     _react2.default.createElement(_Nav2.default, null),
-    _react2.default.createElement(_Nav2.default, null),
     props.children
   );
 };

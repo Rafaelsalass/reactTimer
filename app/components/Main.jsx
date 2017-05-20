@@ -5,7 +5,6 @@ var Main = props => {
   return (
     <div>
       <Nav/>
-      <Nav/>
       {props.children}
     </div>
   );
