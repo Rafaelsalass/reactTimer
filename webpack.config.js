@@ -25,6 +25,7 @@ module.exports ={
       Main: path.resolve(__dirname, 'app/components/Main.jsx'),
       Nav: path.resolve(__dirname, 'app/components/Nav.jsx'),
       Timer: path.resolve(__dirname, 'app/components/Timer.jsx'),
+      Clock: path.resolve(__dirname, 'app/components/Clock.jsx'),
       CountDown: path.resolve(__dirname, 'app/components/CountDown.jsx'),
       appStyles: path.resolve(__dirname, 'app/styles/app.scss')
     }
