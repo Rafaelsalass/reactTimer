@@ -3,12 +3,23 @@
 }
 
 .top-bar{
-  .menu-text{
+  font-size: 1.5em;
+
+  .top-bar-left > .menu > .menu-text{
+    color: $nav-menu-text;
+  }
+
+  .top-bar-right > .menu > .menu-text{
     color: $nav-color;
   }
 
   .menu > .menu-text > a {
     display: inline;
     padding: 0;
+  }
+
+  .active-link {
+    font-weight: bold;
+    color: $nav-color;
   }
 }
