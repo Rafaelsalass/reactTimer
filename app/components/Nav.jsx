@@ -18,7 +18,7 @@ class Nav extends React.Component {
         </div>
         <div className="top-bar-right">
           <ul className="menu">
-            <li className="menu-text">created by <a href="https://github.com/" target="_blank">Rafael Salas</a></li>
+            <li className="menu-text">created by <a href="https://github.com/Rafaelsalass" target="_blank">Rafael Salas</a></li>
           </ul>
         </div>
       </div>

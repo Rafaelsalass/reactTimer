@@ -13344,7 +13344,7 @@ var Nav = function (_React$Component) {
               'created by ',
               _react2.default.createElement(
                 'a',
-                { href: 'https://github.com/', target: '_blank' },
+                { href: 'https://github.com/Rafaelsalass', target: '_blank' },
                 'Rafael Salas'
               )
             )
